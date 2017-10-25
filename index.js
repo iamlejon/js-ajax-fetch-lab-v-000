@@ -1,4 +1,6 @@
 const token = '83cc8514f50ffd67b0c4b42b76ef897bb160b22f'
+let repoName = 'javascript-fetch-lab'
+let repoOwner = 'iamlejon'
 
 function getIssues() {
   let url = `https://api.github.com/repos/${repoOwner}/${repoName}/issues`
