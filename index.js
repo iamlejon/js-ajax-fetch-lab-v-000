@@ -26,7 +26,7 @@ function showForkedRepo(repo){
    repoName = repo.split('/')[1]
    const repoURL  = `<a href="https://github.com/smithwebtek/${repoName}">repo URL</a>`
    $('#results').html(repoURL)
-  }		  }
+  }
 
 function getToken() {
   //change to your token to run in browser, but set
