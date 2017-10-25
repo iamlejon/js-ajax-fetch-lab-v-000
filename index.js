@@ -26,9 +26,6 @@ function createIssue() {
   }).then(resp => getIssues())
 }
 
-function showResults(json) {
-}
-
 function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
   //use fetch to fork it!
@@ -43,7 +40,7 @@ function forkRepo() {
 
 function showForkedRepo(repo){
    repoName = repo.split('/')[1]
-   const repoURL  = `<a href="https://github.com/smithwebtek/${repoName}">repo URL</a>`
+   const repoURL  = `<a href="https://github.com/${repoOwner}/${repoName}">repo URL</a>`
    $('#results').html(repoURL)
   }
 
