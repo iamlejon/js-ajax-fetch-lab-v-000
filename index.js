@@ -13,10 +13,17 @@ function getIssues() {
     .then(json => showIssues(json))
 }
 
-function showIssues(json) {
-}
-
 function createIssue() {
+  const issueTitle = document.getElementById('title').value
+  const issueBody = document.getElementById('body').value
+  const postData = { title: issueTitle, body: issueBody }
+  fetch(`${baseApi}repos/${fork}/issues`, {
+    method: 'post',
+    headers: {
+      'Authorization': `token ${getToken()}`
+    },
+    body: JSON.stringify(postData)
+  }).then(resp => getIssues())
 }
 
 function showResults(json) {
