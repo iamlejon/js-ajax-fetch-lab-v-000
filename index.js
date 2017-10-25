@@ -1,4 +1,12 @@
 function getIssues() {
+  let url = `https://api.github.com/repos/${repoOwner}/${repoName}/issues` 
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        Authoirzation: `token ${token}`
+      }
+    }).then(resp => resp.json())
+    .then(json => showIssues(json))
 }
 
 function showIssues(json) {
