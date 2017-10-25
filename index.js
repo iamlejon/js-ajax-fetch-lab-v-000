@@ -1,5 +1,5 @@
 function getIssues() {
-  let url = `https://api.github.com/repos/${repoOwner}/${repoName}/issues` 
+  let url = `https://api.github.com/repos/${repoOwner}/${repoName}/issues`
     fetch(url, {
       method: 'GET',
       headers: {
